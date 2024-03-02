@@ -1,23 +1,32 @@
 function divideByThree(num) {
     /* Returns the passed in number argument divided by three. */
-    // Your code here
+    let newNum = num / 3;
+    return newNum;
 };
 
 function averageOfTwo(num1, num2) {
     /* Returns the average of two numbers, num1 and num2. */
-    // Your code here
+    let total = num1 + num2;
+    let average = total / 2;
+    return average;
 };
 
 function averageOfFour(num1, num2, num3, num4) {
     /* Takes in four numbers. The function should return the average of all of
     the numbers. */
-    // Your code here
+    let total = num1 + num2 + num3 + num4;
+    let average = total / 4;
+    return average;
 };
 
 function doubler(nums) {
     /* Takes an array of numbers and returns a new array where every element of
     the original array is multiplied by 2. */
-    // Your code here
+    let doubledArray = [];
+    for (let i = 0; i < nums.length; i++) {
+        doubledArray.push(nums[i] * 2);
+    }
+    return doubledArray;
 };
 
 function combineArrays(arr1, arr2) {
@@ -25,18 +34,20 @@ function combineArrays(arr1, arr2) {
     a single array. **Hint**: Use the `Array.concat` method but be aware that
     calling this method won't permanently change, also known as **mutate**,
     either array. */
-    // Your code here
+    let combinedArray = arr1.concat(arr2);
+    return combinedArray;
 };
 
 function wordWithinArray(word, arr) {
     /* Takes in both a word and an array of words as arguments and returns a
     boolean that returns true if that string is located inside of the array, or
     false if it does not. Use `Array.indexOf`. */
-    // Your code here
+    let isWordInArray = arr.indexOf(word) != -1;
+    return isWordInArray;
 };
 
 function echo(str) {
-    /* Takes in a string and returns that string "echo-ized". E.g. 
+    /* Takes in a string and returns that string "echo-ized". E.g.
     echo("Mom!"); // => returns "MOM! ... Mom! ... mom!"
     echo("hey"); // => returns "HEY ... hey ... hey"
     echo("JUMp"); // => returns "JUMP ... JUMp ... jump" */
@@ -84,7 +95,7 @@ function aCounter(word) {
     function to use a `for` loop instead of the `while` loop it is currently
     using. */
 
-    /* 
+    /*
     let index = 0;
     let count = 0;
     while (index < word.length) {
@@ -113,5 +124,5 @@ module.exports = {
     isFive,
     isOdd,
     isSubString,
-    aCounter   
+    aCounter
 }
